@@ -1,7 +1,7 @@
+// initialize pokemonList array
 let pokemonList = [];
 
-pokemonList = [];
-
+// pokemon objects
 let pokemon1 = {
   name: 'Bulbasaur',
   height: 0.7,
@@ -23,4 +23,19 @@ let pokemon3 = {
   type: ['water']
 };
 
+// add pokemon objects to pokemonList array
 pokemonList.push(pokemon1, pokemon2, pokemon3);
+
+// writing pokemon names and heights to the DOM
+for (let i = 0; i < pokemonList.length; i++) {
+  // assign name and height to variables for better readability
+  let height = pokemonList[i].height
+  let name = pokemonList[i].name
+
+  document.write(name + ' ');
+  document.write('(height: ' + height + ') ');
+  if (height < .6) {
+    document.write('- Wow this one is short.')
+  }
+  document.write('<br>')
+}
