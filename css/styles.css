@@ -1,0 +1,21 @@
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.pokemon-button {
+  padding: 5px 20px;
+  cursor: pointer;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  border: 1px solid black;
+}
+
+.pokemon-button:hover {
+  background-color: lightblue;
+}
