@@ -26,7 +26,7 @@ let pokemonRepository = (function () {
     pokemonButton.setAttribute('class', 'pokemon-button');
 
     pokemonButton.addEventListener('click', (e) => {
-      showDetails(pokemonButton.innerText)
+      showDetails(pokemon)
     });
     
     pokemonListItem.appendChild(pokemonButton);
@@ -34,12 +34,8 @@ let pokemonRepository = (function () {
   };
 
   function showDetails(pokemon) {
-    let pokemonListFiltered = pokemonList.filter(obj => {
-      return obj.name === pokemon
-    })
-    let pokemonObject = pokemonListFiltered[0]
-    loadDetails(pokemonObject).then(function () {
-      console.log(pokemonObject);
+    loadDetails(pokemon).then(function () {
+      console.log(pokemon);
     });
   }
 
